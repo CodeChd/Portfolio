@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: Poppins, sans-serif;
     position: sticky;
     top: 0;
     z-index: 20;
@@ -22,12 +23,85 @@
             cursor: pointer;
             font-size: 2rem;
             flex-grow: 1;
+            text-decoration: none;
         }
 
         &_menu{
             display: flex;
             list-style: none;
             text-align: center;
+
+            &_items{
+                line-height: 40px;
+                margin-right: 1.5rem;
+                font-size: 1.2rem;
+        
+
+                &::after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0px;
+                    background: transparent;
+                    transition: width 0.4s ease;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    background: var( --selected-main-color);
+                }
+
+                &_links{
+                    color: var( --selected-main-color);
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                }
+
+            }
+            &_items:last-child{
+                margin: 0px;
+            }
         }
+    }
+}
+.nav-icon{
+    display: none;
+}
+
+//mobile
+
+@media only screen and (max-width : 768px){
+    .navbar_container_menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.3s ease;
+
+        &.active{
+            background: #181818;
+            left: 0px;
+            opacity: 1;
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+    }
+    .navbar_container_menu_items{
+        border-bottom: 1px solid #282828;
+        margin: 0px;
+        padding: 20px 0px;
+
+    }
+
+
+    .nav-icon{
+        font-size: 30px;
+        display: block;
+        cursor: pointer;
+        fill: var(--yellow-main-color);
     }
 }

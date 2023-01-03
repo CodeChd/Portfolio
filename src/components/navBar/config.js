@@ -1,26 +1,26 @@
 export const navMenus = [
   {
-    label: '.Home',
+    label: 'Home',
     to: '/home',
   },
   {
-    label: '.About',
+    label: 'About',
     to: '/about',
   },
   {
-    label: '.Contact',
+    label: 'Contact',
     to: '/contact',
   },
   {
-    label: '.Portfolio',
+    label: 'Portfolio',
     to: '/portfolio',
   },
   {
-    label: '.Skills',
+    label: 'Skills',
     to: '/skills',
   },
   {
-    label: '.Resume',
+    label: 'Resume',
     to: '/resume',
   },
 ];

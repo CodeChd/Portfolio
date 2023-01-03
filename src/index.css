@@ -34,9 +34,16 @@ html{
 
 body{
   background: var(--selected-bg-color);
-  min-height: 100%;
+height: 100%;
 }
 
 #root{
   min-height: 100%;
 } 
+
+.App{
+  height: 100vh;
+}
+.App .App_main-content-wrapper{
+  height: calc(100vh - 80px);
+}

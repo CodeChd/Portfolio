@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { navMenus } from './config';
 import { ReactComponent as Fabar } from '../../assets/bars.svg';
 import { ReactComponent as Xbar } from '../../assets/xmarkSolid.svg';
+
 import './styles.scss';
 
 function Navbar() {
@@ -16,13 +17,20 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar_container">
           <Link to="/" className="navbar_container_logo">
-            <h1>.CJ</h1>
+            <h1>/CJ</h1>
           </Link>
-          <ul className={click ? 'active' : 'navbar_container_menu'}>
+          <ul
+            className={
+              click ? 'navbar_container_menu active' : 'navbar_container_menu'
+            }
+          >
             {/* Links */}
             {navMenus.map((item, i) => (
-              <li key={i} className="navbar_menu_items">
-                <Link to={item.to} className="navbar_menu_items_links">
+              <li key={i} className="navbar_container_menu_items">
+                <Link
+                  to={item.to}
+                  className="navbar_container_menu_items_links"
+                >
                   {item.label}
                 </Link>
               </li>
