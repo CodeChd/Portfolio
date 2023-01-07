@@ -1,14 +1,14 @@
 export default {
   background: {
     color: {
-      value: '##54cda1',
+      value: '#54cd1',
     },
   },
   fpsLimit: 120,
   interactivity: {
     events: {
       onClick: {
-        enable: true,
+        enable: false,
         mode: 'push',
       },
       onHover: {
@@ -19,7 +19,7 @@ export default {
     },
     modes: {
       push: {
-        quantity: 4,
+        quantity: 5,
       },
       repulse: {
         distance: 100,
@@ -39,7 +39,7 @@ export default {
       width: 1,
     },
     collisions: {
-      enable: true,
+      enable: false,
     },
     move: {
       direction: 'none',
@@ -59,13 +59,13 @@ export default {
       value: 80,
     },
     opacity: {
-      value: 0.3,
+      value: 0.5,
     },
     shape: {
-      type: 'circle',
+      type: 'octagon',
     },
     size: {
-      value: { min: 1, max: 5 },
+      value: { min: 1, max: 7 },
     },
   },
   detectRetina: true,

@@ -4,7 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #b1e2d0;
+    color: #2e2e2e;
+    flex-direction: column;
 
     &_text-wrapper{
         display: flex;
@@ -21,6 +22,75 @@
             position: relative;
             overflow: hidden;
             white-space: nowrap;
+            animation: typingEffect 2.5s steps(30, end);
         }
+    }
+
+    .contact-me{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 10px;
+        &_button{
+            margin: 10px;
+            a{
+                cursor: pointer;
+                padding: 10px 70px;
+                text-decoration: none;
+                background: transparent;
+                color: var(--selected-main-color);
+                border: 1.8px solid #4d4c4c;
+                font-family: 'Poppins', sans-serif;
+                border-radius: 6px;
+                font-weight: 400;
+                &:hover{
+                    color: #000000 ;
+                    background: var(--selected-main-color);
+                }
+            }
+        }
+    }
+
+    .contact-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+
+        i{
+            font-size: 2.5rem;
+            color: var(--selected-main-color);
+            cursor: pointer
+            ;
+        }
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    .home_text-wrapper h1{
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 768px) {
+    .home_text-wrapper h1{
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+    .home_text-wrapper h1{
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+}
+
+@keyframes typingEffect{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
     }
 }

@@ -47,3 +47,10 @@ height: 100%;
 .App .App_main-content-wrapper{
   height: calc(100vh - 80px);
 }
+
+.App .App_navbar-wrapper{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  
+}

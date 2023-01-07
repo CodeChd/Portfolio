@@ -17,7 +17,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar_container">
           <Link to="/" className="navbar_container_logo">
-            <h1>/CJ</h1>
+            <h1>CJ</h1>
           </Link>
           <ul
             className={
