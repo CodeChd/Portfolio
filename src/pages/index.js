@@ -1,11 +1,11 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import Image from "next/image";
-import ProfilePic from "../../public/images/profile/developer-pic-1.png";
+// import Image from "next/image";
+// import ProfilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icon";
-import HireMe from "@/components/HireMe";
+// import HireMe from "@/components/HireMe";
 
 
 export default function Home() {
@@ -18,10 +18,10 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen ">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-fulll ">
-            <div className="w-1/2">
+            {/* <div className="w-1/2">
               <Image src={ProfilePic} alt="CJ" className="w-full h-auto" />
-            </div>
-            <div className="w-1/2 flex flex-col items-center self-center">
+            </div> */}
+            <div className="w-full flex mx-auto flex-col items-center justify-center">
               {/* Note : Responsive Text Technique */}
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design. "
@@ -58,7 +58,6 @@ export default function Home() {
           </div>
           
         </Layout>
-        <HireMe/>
       </main>
     </>
   );
