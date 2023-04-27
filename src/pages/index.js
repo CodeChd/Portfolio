@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title></title>
-        <meta name="description" content="Portfolio" />
+        <title>Home</title>
+        <meta name="description" content="Home Page" />
       </Head>
       <main className="flex items-center text-dark w-full min-h-screen ">
         <Layout className="pt-0">
@@ -23,9 +23,10 @@ export default function Home() {
             </div> */}
             <div className="w-full flex mx-auto flex-col items-center justify-center">
               {/* Note : Responsive Text Technique */}
+              
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design. "
-                className="!text-6xl text-left"
+                className="!text-6xl !text-left md:!text-5xl lg:!text-center sm:!text-3xl "
               />
 
               <p className="my-4 text-base font-medium">
@@ -36,7 +37,7 @@ export default function Home() {
               </p>
 
               {/* resume & contact links */}
-              <div className="flex items-center self-start ">
+              <div className="flex items-center self-start lg:self-center   ">
                 <Link
                   href="/dummy.pdf"
                   target="_blank"
@@ -58,6 +59,7 @@ export default function Home() {
           </div>
           
         </Layout>
+        {/* <HireMe/> */}
       </main>
     </>
   );

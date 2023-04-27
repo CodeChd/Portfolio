@@ -24,6 +24,9 @@ module.exports = {
       },
       backgroundImage: {
         circleLight: 'repeating-radial-gradient(rgba(0,0,0,0.4)2px, #f5f5f5 5px,#f5f5f5 100px);' ,
+        circleLightlg: 'repeating-radial-gradient(rgba(0,0,0,0.4)2px, #f5f5f5 8px,#f5f5f5 80px);' ,
+        circleLightmd: "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 6px,#f5f5f5 60px)",
+        circleLightsm: "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 4px,#f5f5f5 40px)",
       },
      
     },
