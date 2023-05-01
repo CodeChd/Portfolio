@@ -1,8 +1,12 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
+import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
+import { useRouter } from "next/router";
+
+
 
 
 const fontM = Montserrat({
@@ -11,6 +15,7 @@ const fontM = Montserrat({
 });
 
 export default function App({ Component, pageProps }) {
+  const router =  useRouter()
   return (
     <>
       <Head>
@@ -20,7 +25,10 @@ export default function App({ Component, pageProps }) {
 
       <main className={`${fontM.variable} font-mont bg-light w-full min-h-screen`}>
         <Navbar/>
-        <Component {...pageProps} />
+        <AnimatePresence
+        mode="wait">
+        <Component key={router.asPath} {...pageProps} />
+        </AnimatePresence>
         <Footer/>
       </main>
     </>
