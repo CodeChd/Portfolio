@@ -34,7 +34,15 @@ export default function Home() {
       </Head>
       <Transition/>
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
-        <Layout className="pt-0">
+        <Layout className="mt-[12rem]">
+            <AnimatedText
+              text="CJ Francisco"
+              className="!w-[80%] overflow-hidden mx-auto !text-9xl absolute right-0 top-[36%] !normal-case !text-right xxl:!text-8xl xl:!text-7xl xl:top-[40%] lg:!text-right lg:!w-full lg:!text-6xl lg:top-[40%] md:!text-5xl md:top-[43%] sm:!text-center sm:top-[38%]  sm:!text-4xl xs:top-[53%] "
+            />
+            <AnimatedText
+              text="Full Stack Developer"
+              className="!w-full !text-9xl max-w-full absolute left-0 top-[50%] !normal-case !text-left  xxl:!text-8xl xl:!text-7xl lg:!text-left lg:!w-full lg:!text-6xl md:!text-5xl sm:!text-center sm:!text-4xl sm:top-[43%] xs:top-[58%]"
+            />
           <div className="flex items-center justify-between w-fulll ">
             {/* <div className="w-1/2">
               <Image src={ProfilePic} alt="CJ" className="w-full h-auto" />
@@ -42,18 +50,14 @@ export default function Home() {
             <div className="w-1/2 flex mx-auto flex-col items-center justify-center">
               {/* Note : Responsive Text Technique */}
 
-              <AnimatedText
-                text="Hello, my name is Cj"
-                className="!text-5xl !normal-case !text-left md:!text-4xl lg:!text-center sm:!text-2xl "
-              />
 
-              <p className="my-4 text-1xl font-[600] text">
+              <p className="my-4 text-[16.55px] font-[600] xs:hidden">
               I'm a self-taught full-stack developer with a passion for creating engaging and useful websites. With a strong foundation in web development, I am always exploring different technologies and finding new ways to learn. and I am constantly seeking out new challenges to improve my skills
 
               </p>
 
               {/* resume & contact links */}
-              <div className="flex items-center self-start lg:self-center   ">
+              <div className="flex items-center self-start lg:self-center xs:mt-4">
                 <Link
                   href="/dummy.pdf"
                   target="_blank"
@@ -90,7 +94,7 @@ export default function Home() {
                 },
                 particles: {
                   number: {
-                    value: 63,
+                    value: 75,
                     density: {
                       enable: false,
                       value_area: 900,
@@ -100,13 +104,13 @@ export default function Home() {
                     value: "#000",
                   },
                   shape: {
-                    type: "triangle",
+                    type: "circle",
                     options: {
-                      sides: 1,
+                      sides: 3,
                     },
                   },
                   opacity: {
-                    value: 0.9,
+                    value: 0.6,
                     random: false,
                     anim: {
                       enable: false,
@@ -116,8 +120,8 @@ export default function Home() {
                     },
                   },
                   size: {
-                    value: 3,
-                    random: false,
+                    value: 5,
+                    random: true,
                     anim: {
                       enable: false,
                       speed: 40,
@@ -131,21 +135,21 @@ export default function Home() {
                     direction: "anti-clockwise",
                     animation: {
                       enable: true,
-                      speed: 5,
+                      speed: 3,
                       sync: false,
                     },
                   },
                   line_linked: {
-                    enable: true,
-                    distance: 200,
+                    enable: false,
+                    distance: 110,
                     color: "#0f172a",
                     opacity: 0.4,
                     width: 2,
                   },
                   move: {
                     enable: true,
-                    speed: 3,
-                    direction: "y",
+                    speed: 1.3,
+                    direction: "none",
                     random: false,
                     straight: false,
                     out_mode: "out",
@@ -159,37 +163,37 @@ export default function Home() {
                 interactivity: {
                   events: {
                     onhover: {
-                      enable: false,
-                      mode: ["grab"],
+                      enable: true,
+                      mode: ["repulse"],
                     },
                     onclick: {
                       enable: false,
                       mode: "bubble",
                     },
-                    resize: false,
+                    resize: true,
                   },
                   modes: {
                     grab: {
-                      distance: 400,
+                      distance: 800,
                       line_linked: {
                         opacity: 1,
                       },
                     },
                     bubble: {
-                      distance: 10,
-                      size: 40,
+                      distance: 20,
+                      size: 45,
                       duration: 2,
                       opacity: 8,
                       speed: 3,
                     },
                     repulse: {
-                      distance: 200,
+                      distance: 90,
                     },
                     push: {
-                      particles_nb: 4,
+                      particles_nb: 0,
                     },
                     remove: {
-                      particles_nb: 2,
+                      particles_nb: 0,
                     },
                   },
                 },
