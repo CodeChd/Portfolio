@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>CJ&apos;s | Portfolio </title>
         <meta name="description" content="Home Page" />
       </Head>
       <Transition/>
@@ -52,7 +52,7 @@ export default function Home() {
 
 
               <p className="my-4 text-[16.55px] font-[600] xs:hidden">
-              I&apos;m a self-taught full-stack developer with a passion for creating engaging and useful websites. With a strong foundation in web development, I am always exploring different technologies and finding new ways to learn. and I am constantly seeking out new challenges to improve my skills
+             CJ is a self-taught full-stack developer with a passion for creating engaging and useful websites. With a strong foundation in web development, always exploring different technologies and finding new ways to learn. and constantly seeking out new challenges to improve his skills
 
               </p>
 
