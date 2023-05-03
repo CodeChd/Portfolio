@@ -10,7 +10,7 @@ const AboutMe = () => {
           transition={{ duration: 0.8, type: "spring" }}
           className="text-4xl  leading-[3.5rem] lg:text-3xl md:text-2xl sm:text-[20px]"
         >
-          Hi, I'm CJ, a Full Stack Developer took up a degree in Bachelor Of Science and Information Technology.I love building things in the web and always
+          Hi, I&apos;m CJ, a Full Stack Developer took up a degree in Bachelor Of Science and Information Technology.I love building things in the web and always
           learning new technologies and keeping up with the latest industry
           trends to stay ahead of the game.
         </motion.p>
@@ -23,7 +23,7 @@ const AboutMe = () => {
         >
           My abundant energy drives me to explore various interests, pursue
           diverse areas of study, and embark on artistic endeavors. As a fast
-          learner, I'm able to pick up new skills and multitask between
+          learner, I&apos;m able to pick up new skills and multitask between
           different projects and roles with ease.
         </motion.p>
         <motion.p
@@ -32,7 +32,7 @@ const AboutMe = () => {
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
           className="text-4xl my-4 font-[500] leading-[3.5rem] lg:text-3xl md:text-2xl sm:text-[20px]"
         >
-          I'm fueled by my love for building things and bringing ideas to life,
+          I&apos;m fueled by my love for building things and bringing ideas to life,
           which has led me to develop a portfolio of work that showcases my
           unique skills and creativity. Besides tech work, I enjoy listening to
           podcasts, reading, traveling, and indulging in a lot of coffee.
