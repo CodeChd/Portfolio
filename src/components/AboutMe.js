@@ -3,65 +3,40 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <div className="grid  w-full items-center gap-[2rem] md:gap-8 min-h-screen">
-      <div
-        className="flex flex-col items-start justify-start
-    xl:col-span-2 lg:order-2 lg:col-span-4"
-      >
+      <div className="flex flex-col items-start justify-start font-al xxl:mt-[5rem] xs:mt-[5rem] ">
         <motion.p
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, type: "spring" }}
-          className="text-3xl font-[500]"
+          className="text-4xl  leading-[3.5rem] lg:text-3xl md:text-2xl sm:text-[20px]"
         >
-          Hello, I&apos;m CJ, A Full stack web developer and UI/UX designer with a
-          passion for creating beautiful, functional, and user-centered digital
-          experiences. With 1 year of experience. I am always looking for new
-          and innovative ways to bring my clients visions to life.
+          Hi, I'm CJ, a Full Stack Developer took up a degree in Bachelor Of Science and Information Technology.I love building things in the web and always
+          learning new technologies and keeping up with the latest industry
+          trends to stay ahead of the game.
         </motion.p>
 
         <motion.p
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
-          transition={{ duration: 0.8, type: "spring" }}
-          className="text-3xl my-4 font-[500]"
+          transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
+          className="text-4xl my-4 font-[500] leading-[3.5rem] lg:text-3xl md:text-2xl sm:text-[20px]"
         >
-          I believe that design is about more than just making things look
-          pretty – it&apos;s about solving problems and creating intuitive, enjoyable
-          experiences for users.
+          My abundant energy drives me to explore various interests, pursue
+          diverse areas of study, and embark on artistic endeavors. As a fast
+          learner, I'm able to pick up new skills and multitask between
+          different projects and roles with ease.
         </motion.p>
-
         <motion.p
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
-          transition={{ duration: 0.8, type: "spring" }}
-          className="text-3xl font-[500]"
+          transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
+          className="text-4xl my-4 font-[500] leading-[3.5rem] lg:text-3xl md:text-2xl sm:text-[20px]"
         >
-          Whether I&apos;m working on a website, mobile app, or other digital
-          product, I bring my commitment to design excellence and user-centered
-          thinking to every project I work on. I look forward to the opportunity
-          to bring my skills and passion to your next project.
+          I'm fueled by my love for building things and bringing ideas to life,
+          which has led me to develop a portfolio of work that showcases my
+          unique skills and creativity. Besides tech work, I enjoy listening to
+          podcasts, reading, traveling, and indulging in a lot of coffee.
         </motion.p>
-        <div className="flex flex-col items-start justify-start ">
-          <motion.h2
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 0.9, type: "spring" }}
-            className="mt-4 text-3xl font-[500]"
-          >
-            Outside of tech, my hobbies are:
-          </motion.h2>
-          <motion.ul
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 1, type: "spring" }}
-            className="text-2xl mt-2 font-[500] "
-          >
-            <li>listening to podcasts</li>
-            <li>Reading</li>
-            <li>Travel</li>
-            <li>Coffee</li>
-          </motion.ul>
-        </div>
       </div>
     </div>
   );
