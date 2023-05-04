@@ -1,7 +1,7 @@
 
 const ErrorPage = () => {
   return (
-    <div>Wala laman </div>
+    <div>Opps!.. there is nothing here!</div>
   )
 }
 
