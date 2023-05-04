@@ -6,7 +6,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icon";
 import { useRouter } from "next/router";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Transition from "@/components/Transition";
@@ -27,6 +27,37 @@ export default function Home() {
     await console.log(container);
   }, []);
 
+
+
+
+  //change state based on screen size
+  const [particlesMedia, setParticlesMedia] = useState(false)
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setParticlesMedia(true);
+    } else {
+      setParticlesMedia(false);
+    }
+  },[])
+
+
+
+  useEffect(() =>{
+    if (typeof window !== 'undefined') {
+      const media = window.matchMedia(`(max-width:767px)`);
+      media.addEventListener("resize",updateTarget);
+
+      if (media.matches) {
+        setParticlesMedia(true);
+      }
+
+      return () => media.removeEventListener("resize",updateTarget);
+    }
+  },[])
+
+  
+
   return (
     <>
       <Head>
@@ -38,16 +69,14 @@ export default function Home() {
         <Layout className="mt-[12rem]">
             <AnimatedText
               text="CJ Francisco"
-              className="!w-[80%] overflow-hidden mx-auto !text-9xl absolute right-0 top-[36%] !normal-case !text-right xxl:!text-8xl xl:!text-7xl xl:top-[40%] lg:!text-right lg:!w-full lg:!text-6xl lg:top-[40%] md:!text-5xl md:top-[43%] sm:!text-center sm:top-[38%]  sm:!text-4xl xs:top-[53%] "
+              className="!w-[80%] overflow-hidden mx-auto !text-9xl absolute right-0 top-[36%] !normal-case !text-right xxl:!text-8xl xl:!text-7xl xl:top-[40%] lg:!text-right lg:!w-full lg:!text-6xl lg:top-[40%] md:!text-5xl md:top-[40%] sm:!text-center sm:top-[50%] "
             />
             <AnimatedText
               text="Full Stack Developer"
-              className="!w-full !text-9xl max-w-full absolute left-0 top-[50%] !normal-case !text-left  xxl:!text-8xl xl:!text-7xl lg:!text-left lg:!w-full lg:!text-6xl md:!text-5xl sm:!text-center sm:!text-4xl sm:top-[43%] xs:top-[58%]"
+              className="!w-full !text-9xl max-w-full absolute left-0 top-[50%] !normal-case !text-left  xxl:!text-8xl xl:!text-7xl lg:!text-left lg:!w-full lg:!text-6xl md:top-[48%] md:!text-5xl sm:!text-center sm:top-[59%]"
             />
           <div className="flex items-center justify-between w-fulll ">
-            {/* <div className="w-1/2">
-              <Image src={ProfilePic} alt="CJ" className="w-full h-auto" />
-            </div> */}
+    
             <div className="w-1/2 flex mx-auto flex-col items-center justify-center">
               {/* Note : Responsive Text Technique */}
 
@@ -56,7 +85,7 @@ export default function Home() {
               initial={{y:20, opacity: 0}}
               whileInView={{y:0, opacity: 1}}
               transition={{delay: 0.7, duration: 0.3}}
-              className="my-4 text-[16.55px] font-[600] xs:hidden">
+              className="my-4 text-[16.55px] font-[600] sm:hidden">
              CJ is a self-taught full-stack developer with a passion for creating engaging and useful websites. With a strong foundation in web development, always exploring different technologies and finding new ways to learn. and constantly seeking out new challenges to improve his skills
 
               </motion.p>
@@ -66,7 +95,7 @@ export default function Home() {
               initial={{y:20, opacity: 0}}
               whileInView={{y:0, opacity: 1}}
               transition={{delay: 1, duration: 0.3}}
-              className="flex items-center self-center lg:self-center xs:mt-4">
+              className="flex items-center self-center sm:mt-[3rem] ">
                 <Link
                   href="/dummy.pdf"
                   target="_blank"
@@ -90,9 +119,10 @@ export default function Home() {
           </div>
         </Layout>
 
-        <div className=" absolute -z-1">
+        <div className=" absolute">
           {router.asPath === "/" ? (
             <Particles
+              className=""
               id="tsparticles"
               init={particlesInit}
               loaded={particlesLoaded}
@@ -103,7 +133,7 @@ export default function Home() {
                 },
                 particles: {
                   number: {
-                    value: 75,
+                    value: `${particlesMedia ? 27 : 75}`,
                     density: {
                       enable: false,
                       value_area: 900,

@@ -66,6 +66,7 @@ const Project = ({
   github,
   stack,
   stackClasName,
+  live,
 }) => {
   return (
    
@@ -89,7 +90,7 @@ const Project = ({
           {type}
         </span>
         <Link
-          href={link}
+          href={live}
           target="_blank"
           className="hover:underline undeline-offset-2"
         >
@@ -144,11 +145,12 @@ const projects = () => {
                 img={Jcytf}
                 title="Community church website"
                 summary="The church website displays general information about the church and includes user authentication and authorization for the admin dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
-                link="/"
+                link="https://github.com/CodeChd/jcytf-community-church"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
-                stack="NextJS Strapi Framer-motion"
+                stack="NextJS Strapi"
                 stackClasName="text-start w-max"
+                live="https://jcytfchurch.vercel.app/"
               />
             </motion.div>
             <motion.div
@@ -158,12 +160,13 @@ const projects = () => {
               <Project
                 img={Wht}
                 title="What i Learned"
-                summary=" This application helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
-                link="/"
+                summary=" Full Stack application that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
+                link="https://github.com/CodeChd/what-i-learn "
                 github="https://github.com/CodeChd"
                 type="Featured Project"
                 stack="ReactJS Supabase"
                 stackClasName="text-start w-max"
+                live="https://whatilearned-cj.netlify.app/"
               />
             </motion.div>
             <motion.div
@@ -174,11 +177,12 @@ const projects = () => {
                 img={DevFindr}
                 title="Dev Finder"
                 summary="Dev Finder is an app that enables users to discover and display information about other GitHub users, presented through engaging visuals."
-                link="/"
+                link="https://github.com/CodeChd/dev-finder"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
                 stack="ReactJS"
                 stackClasName="text-start w-max"
+                live="https://dev-findr-cjfrancisco.netlify.app"
               />
             </motion.div>
           </div>

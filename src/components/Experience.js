@@ -4,7 +4,7 @@ import ListIcon from "./ListIcon";
 
 
 // generized component
-const Details = ({ postion, company, companyLink, time, address, work }) => {
+const Details = ({ postion, company, companyLink, time, address }) => {
     const ref = useRef(null)
 
   return (
@@ -24,7 +24,19 @@ const Details = ({ postion, company, companyLink, time, address, work }) => {
         <span className="capitalize  font-medium text-dark/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium  w-full md:text-sm ">{work}</p>
+        <div className="font-medium  w-full md:text-sm ">
+          <ul className="flex flex-col gap-3 my-4 list-disc">
+            <li>Familiarity with AWS Amplify</li>
+            <li>Implemented pagination and filtering for 5000+ users</li>
+            <li>Managed user authentication and authorization roles using AWS Cognito</li>
+            <li>Handled user data and uploads to AWS DynamoDB</li>
+            <li>Configured S3 SDK and policies to enable upload of user personal information to AWS S3</li>
+            <li>Organized Routing to other web pages</li>
+            <li>Handled Third party api&apos;s integrated into our project</li>
+            <li>Emphasized the importance of Optimization</li>
+            <li>Emphasized the importance of keeping documentation up to date</li>
+          </ul>
+        </div>
       </motion.div>
     </li>
   );
@@ -66,9 +78,9 @@ const Experience = () => {
             postion="Full Stack Developer"
             company="DEVKINETICS"
             companyLink="https://www.devkinetics.com/"
-            time="October 2022 - Present"
+            time="October 2022"
             address="Quezon City, Philippines"
-            work="tba"
+        
           />
       
         </ul>
