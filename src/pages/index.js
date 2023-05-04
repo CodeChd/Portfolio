@@ -10,6 +10,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Transition from "@/components/Transition";
+import { motion } from "framer-motion";
 
 
 export default function Home() {
@@ -51,13 +52,21 @@ export default function Home() {
               {/* Note : Responsive Text Technique */}
 
 
-              <p className="my-4 text-[16.55px] font-[600] xs:hidden">
+              <motion.p 
+              initial={{y:20, opacity: 0}}
+              whileInView={{y:0, opacity: 1}}
+              transition={{delay: 0.7, duration: 0.3}}
+              className="my-4 text-[16.55px] font-[600] xs:hidden">
              CJ is a self-taught full-stack developer with a passion for creating engaging and useful websites. With a strong foundation in web development, always exploring different technologies and finding new ways to learn. and constantly seeking out new challenges to improve his skills
 
-              </p>
+              </motion.p>
 
               {/* resume & contact links */}
-              <div className="flex items-center self-start lg:self-center xs:mt-4">
+              <motion.div
+              initial={{y:20, opacity: 0}}
+              whileInView={{y:0, opacity: 1}}
+              transition={{delay: 1, duration: 0.3}}
+              className="flex items-center self-center lg:self-center xs:mt-4">
                 <Link
                   href="/dummy.pdf"
                   target="_blank"
@@ -76,7 +85,7 @@ export default function Home() {
                 >
                   Contact
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </Layout>
