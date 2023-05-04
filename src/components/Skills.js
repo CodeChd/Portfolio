@@ -42,13 +42,12 @@ const Skills = () => {
         <SkillComponent name="Firebase" x="15vw" y="14vw"/>
         <SkillComponent name="Supabase" x="23vw" y="19vw"/>
         <SkillComponent name="MongoDB" x="-9vw" y="12vw"/>
-        <SkillComponent name="Strapi" x="10vw" y="-20vw"/>
+        <SkillComponent name="Strapi" x="1vw" y="-21vw"/>
         <SkillComponent name="Github" x="0vw" y="21vw"/>
         <SkillComponent name="Tailwind CSS" x="15vw" y="-14vw"/>
-        <SkillComponent name="Bootstrap" x="30vw" y="-3vw"/>
-        <SkillComponent name="Redux" x="-34vw" y="0vw"/>
-        <SkillComponent name="Flutter" x="-20vw" y="-20vw"/>
-        <SkillComponent name="SASS" x="-8vw" y="-17vw"/>
+        <SkillComponent name="Bootstrap" x="25vw" y="-4vw"/>
+        <SkillComponent name="Flutter" x="-34vw" y="-1vw"/>
+        <SkillComponent name="SASS" x="-17vw" y="-17vw"/>
         <SkillComponent name="REST API" x="30vw" y="6vw"/>
         <SkillComponent name="Express JS" x="-20vw" y="19vw"/>
         <SkillComponent name="Figma" x="30vw" y="-10vw"/>

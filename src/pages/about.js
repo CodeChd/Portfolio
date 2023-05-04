@@ -30,8 +30,11 @@ const about = () => {
               className=" relative w-max h-max rounded-2xl border-2 border-solid
             border-dark bg-light p-8 xl:col-span-2 lg:order-1  md:col-span-4  "
             >
-              <div className="absolute top-0 -right-3 -z-10 h-[102%] w-[102%] rounded-[2rem] bg-dark" />
-
+             
+      <div
+        className="absolute top-0 -right-3 -z-10 h-[102%] w-[102%] rounded-[2rem] bg-dark 
+  md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
+      />
               <Image
                 src={profilePic}
                 alt="Carl Jandel Francisco"
