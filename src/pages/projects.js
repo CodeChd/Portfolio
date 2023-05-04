@@ -5,8 +5,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Jcytf from "../../public/images/JCYTF-PROJECT.png";
-import Wht from "../../public/images/WHAT I LEARNED - PROJECT.png";
-import DevFindr from "../../public/images/DEVFINDR - PROJECT.png";
+import Wht from "../../public/images/WHATILEARNED-PROJECT.png";
+import DevFindr from "../../public/images/DEVFINDR-PROJECT.png";
 import { motion } from "framer-motion";
 import Transition from "@/components/Transition";
 // full grid span component
@@ -71,7 +71,6 @@ const Project = ({
    
     <article className="w-full flex flex-col flex-wrap items-center justify-between rounded-3xl border border-solid border-dark bg-light text-dark shadow-2xl p-12 relative xs:p-4 ">
 
-      {/* border shadow */}
       <div
         className="absolute top-0 -right-3 -z-10 h-[102%] w-[102%] rounded-[2rem] bg-dark 
   md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
