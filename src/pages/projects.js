@@ -4,7 +4,9 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import prjImage from "../../public/images/cell group.jpg";
+import Jcytf from "../../public/images/JCYTF-PROJECT.png";
+import Wht from "../../public/images/WHAT I LEARNED - PROJECT.png";
+import DevFindr from "../../public/images/DEVFINDR - PROJECT.png";
 import { motion } from "framer-motion";
 import Transition from "@/components/Transition";
 // full grid span component
@@ -140,13 +142,13 @@ const projects = () => {
             className="col-span-4 xl:col-span-6 md:col-span-12">
              
               <Project
-                img={prjImage}
+                img={Jcytf}
                 title="Community church website"
-                summary="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'."
+                summary="The church website displays general information about the church and includes user authentication and authorization for the admin dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
                 link="/"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
-                stack="ReactJS NextJS Strapi"
+                stack="NextJS Strapi Framer-motion"
                 stackClasName="text-start w-max"
               />
             </motion.div>
@@ -155,9 +157,9 @@ const projects = () => {
             animate={{y:0}}
             className="col-span-4 xl:col-span-6 md:col-span-12 ">
               <Project
-                img={prjImage}
-                title="What i Learn"
-                summary="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'"
+                img={Wht}
+                title="What i Learned"
+                summary=" This application helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
                 link="/"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
@@ -170,9 +172,9 @@ const projects = () => {
             animate={{y:0}}
             className="col-span-4 xl:col-span-6 md:col-span-12">
               <Project
-                img={prjImage}
+                img={DevFindr}
                 title="Dev Finder"
-                summary="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'."
+                summary="Dev Finder is an app that enables users to discover and display information about other GitHub users, presented through engaging visuals."
                 link="/"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
