@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
   LightGmailIcon,
-  GmailIcon,
+  FeMentor,
   GithubIcon,
   LinkedInIcon,
   FacebookIcon
@@ -101,16 +101,16 @@ const Navbar = () => {
         <nav className="flex items-center justify-center flex-wrap ">
           {/* same as line 37 */}
           <motion.a
-            href="https://twitter.com"
+            href="https://www.frontendmentor.io/profile/CodeChd"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mr-3"
           >
-            <GmailIcon />
+            <FeMentor/>
           </motion.a>
           <motion.a
-            href="https://github.com"
+            href="https://github.com/CodeChd"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -119,7 +119,7 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/cj-francisco-918509275/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -128,7 +128,7 @@ const Navbar = () => {
             <LinkedInIcon />
           </motion.a>
           <motion.a
-            href="https://dribble.com"
+            href="https://web.facebook.com/cj.francisco.3152/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -171,7 +171,7 @@ const Navbar = () => {
           <nav className="flex items-center justify-center flex-wrap mt-2">
             {/* same as line 37 */}
             <motion.a
-              href="/"
+              href="https://www.frontendmentor.io/profile/CodeChd"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -189,7 +189,7 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/cj-francisco-918509275/"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}

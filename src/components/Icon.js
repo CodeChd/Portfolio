@@ -47,7 +47,7 @@ export const FacebookIcon = ({ className, ...rest }) => (
   </svg>
 )
 
-export const GmailIcon = ({ className, ...rest }) => (
+export const FeMentor = ({ className, ...rest }) => (
   <svg
      className={`w-full h-auto ${className}`}
   xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" {...rest}>
