@@ -90,7 +90,7 @@ export default function Home() {
                 className="flex items-center self-center sm:mt-[3rem] "
               >
                 <Link
-                  href="/dummy.pdf"
+                  href="/CARL JANDEL FRANCISCO - CV.pdf"
                   target="_blank"
                   className="flex items-center p-2.5 px-6 bg-dark text-light
               rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
