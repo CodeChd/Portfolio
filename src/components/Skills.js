@@ -49,8 +49,8 @@ const Skills = () => {
         <SkillComponent name="Flutter" x="-34vw" y="-1vw"/>
         <SkillComponent name="SASS" x="-17vw" y="-17vw"/>
         <SkillComponent name="REST API" x="30vw" y="6vw"/>
-        <SkillComponent name="Express JS" x="-20vw" y="19vw"/>
-        <SkillComponent name="Figma" x="30vw" y="-10vw"/>
+        <SkillComponent name="NodeJS" x="-20vw" y="19vw"/>
+        <SkillComponent name="Photoshop" x="30vw" y="-10vw"/>
       </div>
     </>
   );
