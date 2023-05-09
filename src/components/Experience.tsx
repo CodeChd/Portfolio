@@ -56,7 +56,7 @@ const Details = ({ postion, company, companyLink, time, address }: DetailsProp) 
 const Experience = () => {
 
     // animate scroll
-    const ulChildren = useRef(null)
+    const ulChildren = useRef<HTMLUListElement>(null)
     const ref = useRef(null)
     const {scrollYProgress} = useScroll(
         {
@@ -66,7 +66,7 @@ const Experience = () => {
     )
 
     useEffect(() => {
-         ulChildren.current.children.length;
+         ulChildren?.current?.children.length;
       }, []);
   return (
     <div className="my-64">

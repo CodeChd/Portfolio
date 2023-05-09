@@ -1,8 +1,10 @@
 import { motion, useScroll } from "framer-motion"
 
+type ListIcnsProps = {
+reference: React.RefObject<HTMLElement>
+}
 
-
-const ListIcon = ({reference}) => {
+const ListIcon = ({reference}: ListIcnsProps) => {
 
     const {scrollYProgress} = useScroll(
         {

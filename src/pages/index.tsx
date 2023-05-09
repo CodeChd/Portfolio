@@ -12,13 +12,13 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     console.log(engine);
 
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
+  const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
   }, []);
 
