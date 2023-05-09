@@ -27,7 +27,7 @@ export default function Home() {
   let particleSize;
 
   if (particlesMedia) {
-    particleSize = 27;
+    particleSize = 28;
   } else if (!particlesMedia) {
     particleSize = 75;
   }
