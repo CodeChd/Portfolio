@@ -11,8 +11,16 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+
+type CustomLinkProps = {
+  href: string
+  title: string
+  className: string
+  toggle?: () => void
+}
+
 //Generized Component
-const CustomLink = ({ href, title, className = "" }) => {
+const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
   const router = useRouter();
   return (
     //Dynamic Class
@@ -30,11 +38,11 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 // Mobile
-const MobileLinkComponent = ({ href, title, className = "", toggle }) => {
+const MobileLinkComponent = ({ href, title, className = "", toggle }: CustomLinkProps) => {
   const router = useRouter();
 
   const handleClick = () => {
-    toggle();
+    toggle?.();
     router.push(href);
   };
 

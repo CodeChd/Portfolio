@@ -1,55 +1,41 @@
-import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icon";
-import Layout from "@/components/Layout";
+import AnimatedText from "../components/AnimatedText";
+import { GithubIcon } from "../components/Icon";
+import Layout from "../components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Jcytf from "../../public/images/JCYTF-PROJECT.png";
-import Wht from "../../public/images/WHATILEARNED-PROJECT.png";
-import DevFindr from "../../public/images/DEVFINDR-PROJECT.png";
+import { Resources } from "../data/data";
 import { motion } from "framer-motion";
-import Transition from "@/components/Transition";
-// full grid span component
-// const FtProject = ({ type, title, summary, img, link, github }) => {
-//   return (
-//     <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light text-dark shadow-2zl p-12">
-//       <Link href={link} target="_blank"
-//       className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-//         <Image src={img} alt={title} className="w-full h-auto" />
-//       </Link>
+import Transition from "../components/Transition";
 
-//       <div className="w-1/2 flex flex-col items-start justify-between pl-6 ">
-//         <span className="text-primaryIndigo font-medium text-xl">{type}</span>
-//         <Link href={link} target="_blank" className="hover:underline undeline-offset-2">
-//           <h2 className="my-2 w-full text-left text-4xl font-bold ">{title}</h2>
-//         </Link>
-//         <p className="my-2 font-medium text-dark ">{summary}</p>
-//       <div className="my-2 flex items-center ">
-//         <Link href={github} className="w-10" target="_blank">
-//           <GithubIcon />
-//         </Link>
+type ProjectProps = {
+  type: string
+  title: string
+  summary: string
+  img: string
+  link: string
+  github: string
+  stack: string
+  stackClassName: string
+  live: string
+}
 
-//         <Link href={link} className="ml-4 rounded-lg bg-dark text-light p-2  px-6 text-lg font-semibold" target="_blank">
-//           Visit Source Code
-//         </Link>
-//       </div>
-//       </div>
 
-//     </article>
-//   );
-// };
-
+type TechStackProps = {
+  stackStyles: string
+  stackName: string
+}
 //Stack used
-const TechStack = ({ names, className = "" }) => {
+const TechStack = ({ stackName, stackStyles = "" }: TechStackProps) => {
   return (
     <div className="w-full rounded-2xl my-2">
       <ul className="w-full flex  items-center justify-start gap-2">
-        {names.split(/\s+/).map((name) => (
+        {stackName.split(/\s+/).map((name) => (
           <li
             key={name}
-            className={` ${className} w-full px-1 border-2 border-solid border-dark rounded-md text-center font-medium `}
+            className={` ${stackStyles} w-full px-1 border-2 border-solid border-dark rounded-md text-center font-medium `}
           >
-            {name}
+            {stackName}
           </li>
         ))}
       </ul>
@@ -65,9 +51,9 @@ const Project = ({
   link,
   github,
   stack,
-  stackClasName,
+  stackClassName,
   live,
-}) => {
+}: ProjectProps) => {
   return (
    
     <article className="w-full flex flex-col flex-wrap items-center justify-between rounded-3xl border border-solid border-dark bg-light text-dark shadow-2xl p-12 relative xs:p-4 ">
@@ -82,7 +68,7 @@ const Project = ({
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg   "
       >
-        <Image src={img} alt={title} priority className="w-50%  h-auto" />
+        <Image src={`${img}`} alt={title} width={400} height={400} priority className="w-50%  h-auto" />
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-2 ">
@@ -100,7 +86,7 @@ const Project = ({
         </Link>
         <p className="my-2 font-medium text-dark sm:text-sm ">{summary}</p>
 
-        <TechStack className={stackClasName} names={stack} />
+        <TechStack stackStyles={stackClassName} stackName={stack} />
 
         <div className="my-2 flex items-center ">
           <Link href={github} className="w-10 md:w-6" target="_blank">
@@ -142,14 +128,14 @@ const projects = () => {
             className="col-span-4 xl:col-span-6 md:col-span-12">
              
               <Project
-                img={Jcytf}
+                img={Resources[0].imgUrl}
                 title="Community church website"
                 summary="The church website displays general information about the church and includes user authentication and authorization for the admin dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
                 link="https://github.com/CodeChd/jcytf-community-church"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
                 stack="NextJS Strapi"
-                stackClasName="text-start w-max"
+                stackClassName="text-start w-max"
                 live="https://jcytfchurch.vercel.app/"
               />
             </motion.div>
@@ -158,14 +144,14 @@ const projects = () => {
             animate={{y:0}}
             className="col-span-4 xl:col-span-6 md:col-span-12 ">
               <Project
-                img={Wht}
+                img={Resources[1].imgUrl}
                 title="What i Learned"
                 summary=" Full Stack application that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
                 link="https://github.com/CodeChd/what-i-learn "
                 github="https://github.com/CodeChd"
                 type="Featured Project"
                 stack="ReactJS Supabase"
-                stackClasName="text-start w-max"
+                stackClassName="text-start w-max"
                 live="https://whatilearned-cj.netlify.app/"
               />
             </motion.div>
@@ -174,14 +160,14 @@ const projects = () => {
             animate={{y:0}}
             className="col-span-4 xl:col-span-6 md:col-span-12">
               <Project
-                img={DevFindr}
+                img={Resources[2].imgUrl}
                 title="Dev Finder"
                 summary="Dev Finder is an app that enables users to discover and display information about other GitHub users, presented through engaging visuals."
                 link="https://github.com/CodeChd/dev-finder"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
                 stack="ReactJS"
-                stackClasName="text-start w-max"
+                stackClassName="text-start w-max"
                 live="https://dev-findr-cjfrancisco.netlify.app"
               />
             </motion.div>

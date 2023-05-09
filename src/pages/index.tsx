@@ -1,15 +1,13 @@
-import Layout from "@/components/Layout";
+import Layout from "../components/Layout";
 import Head from "next/head";
-// import Image from "next/image";
-// import ProfilePic from "../../public/images/profile/developer-pic-1.png";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icon";
+import { LinkArrow } from "../components/Icon";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Transition from "@/components/Transition";
+import Transition from "../components/Transition";
 import { motion } from "framer-motion";
 
 export default function Home() {

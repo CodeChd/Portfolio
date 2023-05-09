@@ -4,7 +4,18 @@ import ListIcon from "./ListIcon";
 
 
 // generized component
-const Details = ({ postion, company, companyLink, time, address }) => {
+
+type DetailsProp = {
+  postion: string
+  company: string
+  companyLink: string
+  time: number | string
+  address: string
+}
+
+
+
+const Details = ({ postion, company, companyLink, time, address }: DetailsProp) => {
     const ref = useRef(null)
 
   return (

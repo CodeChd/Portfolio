@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 
+type SkillsProp = {
+  name: string
+  x: number | string
+  y: number | string
+}
 
 // generized component
-const SkillComponent = ({name, x,y}) => {
+const SkillComponent = ({name, x,y}: SkillsProp) => {
     return (
         <motion.div 
         className="
