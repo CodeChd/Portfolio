@@ -1,33 +1,38 @@
-import Layout from "@/components/Layout";
+import Layout from "../components/Layout";
 import Head from "next/head";
-// import Image from "next/image";
-// import ProfilePic from "../../public/images/profile/developer-pic-1.png";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icon";
+import { LinkArrow } from "../components/Icon";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Transition from "@/components/Transition";
+import Transition from "../components/Transition";
 import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     console.log(engine);
 
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
+  const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
   }, []);
 
   //change state based on screen size
   const [particlesMedia, setParticlesMedia] = useState(false);
+  let particleSize;
 
-  const updateTarget = useCallback((e) => {
+  if (particlesMedia) {
+    particleSize = 28;
+  } else if (!particlesMedia) {
+    particleSize = 75;
+  }
+
+  const updateTarget = useCallback((e: any) => {
     if (e.matches) {
       setParticlesMedia(true);
     } else {
@@ -46,7 +51,7 @@ export default function Home() {
 
       return () => media.removeEventListener("resize", updateTarget);
     }
-  }, []);
+  }, [updateTarget]);
 
   return (
     <>
@@ -126,7 +131,7 @@ export default function Home() {
                 },
                 particles: {
                   number: {
-                    value: `${particlesMedia ? 27 : 75}`,
+                    value: particleSize,
                     density: {
                       enable: false,
                       value_area: 900,
@@ -137,9 +142,6 @@ export default function Home() {
                   },
                   shape: {
                     type: "circle",
-                    options: {
-                      sides: 3,
-                    },
                   },
                   opacity: {
                     value: 0.6,

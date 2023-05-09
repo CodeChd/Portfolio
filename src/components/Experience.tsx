@@ -4,7 +4,18 @@ import ListIcon from "./ListIcon";
 
 
 // generized component
-const Details = ({ postion, company, companyLink, time, address }) => {
+
+type DetailsProp = {
+  postion: string
+  company: string
+  companyLink: string
+  time: number | string
+  address: string
+}
+
+
+
+const Details = ({ postion, company, companyLink, time, address }: DetailsProp) => {
     const ref = useRef(null)
 
   return (
@@ -45,7 +56,7 @@ const Details = ({ postion, company, companyLink, time, address }) => {
 const Experience = () => {
 
     // animate scroll
-    const ulChildren = useRef(null)
+    const ulChildren = useRef<HTMLUListElement>(null)
     const ref = useRef(null)
     const {scrollYProgress} = useScroll(
         {
@@ -55,7 +66,7 @@ const Experience = () => {
     )
 
     useEffect(() => {
-         ulChildren.current.children.length;
+         ulChildren?.current?.children.length;
       }, []);
   return (
     <div className="my-64">

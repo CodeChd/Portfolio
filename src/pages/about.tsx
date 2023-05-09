@@ -1,12 +1,12 @@
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
+import AnimatedText from "../components/AnimatedText";
+import Layout from "../components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/dp-me.jpg";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Transition from "@/components/Transition";
-import AboutMe from "@/components/AboutMe";
+import { Resources } from "../data/data";
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Transition from "../components/Transition";
+import AboutMe from "../components/AboutMe";
 
 const about = () => {
   return (
@@ -36,9 +36,11 @@ const about = () => {
   md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
       />
               <Image
-                src={profilePic}
+                src={Resources[3].imgUrl}
+                width={400}
+                height={400}
                 alt="Carl Jandel Francisco"
-                className="w-[30rem] h-[37rem] rounded-2xl lg:w-[28rem] lg:h-[31rem] sm:w-[22rem] sm:h-[28rem] xs:w-[13rem] xs:h-[18rem] "
+                className="w-[32rem] h-[37rem] rounded-2xl lg:w-[28rem] lg:h-[31rem] sm:w-[22rem] sm:h-[28rem] xs:w-[13rem] xs:h-[18rem] "
                 priority
                 sizes="(max-width: 768px) 70vw,
                   (max-width: 1200px) 30vw, 50vw"

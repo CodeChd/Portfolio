@@ -1,4 +1,9 @@
-export const GithubIcon = ({ className, ...rest }) => (
+type IconProps = {
+  className?: string
+}
+
+
+export const GithubIcon = ({ className, ...rest }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -14,7 +19,7 @@ export const GithubIcon = ({ className, ...rest }) => (
     />
   </svg>
 );
-export const LinkedInIcon = ({ className, ...rest }) => (
+export const LinkedInIcon = ({ className, ...rest }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -35,7 +40,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const FacebookIcon = ({ className, ...rest }) => (
+export const FacebookIcon = ({ className, ...rest }: IconProps) => (
   <svg 
   className={`w-full h-auto ${className}`}
   xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +52,7 @@ export const FacebookIcon = ({ className, ...rest }) => (
   </svg>
 )
 
-export const FeMentor = ({ className, ...rest }) => (
+export const FeMentor = ({ className, ...rest }: IconProps) => (
   <svg
      className={`w-full h-auto ${className}`}
   xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" {...rest}>
@@ -61,7 +66,7 @@ export const FeMentor = ({ className, ...rest }) => (
     />
   </svg>
 )
-export const LightGmailIcon = ({ className, ...rest }) => (
+export const LightGmailIcon = ({ className, ...rest }: IconProps) => (
   <svg 
      className={`w-full h-auto ${className}`}
   xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" {...rest}>
@@ -76,7 +81,7 @@ export const LightGmailIcon = ({ className, ...rest }) => (
   </svg>
 )
 
-export const CircularText = ({className, ...rest}) => (
+export const CircularText = ({className, ...rest}: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1440}
@@ -90,7 +95,7 @@ export const CircularText = ({className, ...rest}) => (
 )
 
 
-export const LinkArrow = ({ className, ...rest }) => (
+export const LinkArrow = ({ className, ...rest }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}

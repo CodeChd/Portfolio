@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import "@/styles/globals.css";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat, Poppins} from "next/font/google";
 
