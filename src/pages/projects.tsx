@@ -35,7 +35,7 @@ const TechStack = ({ stackName, stackStyles = "" }: TechStackProps) => {
             key={name}
             className={` ${stackStyles} w-full px-1 border-2 border-solid border-dark rounded-md text-center font-medium `}
           >
-            {stackName}
+            {name}
           </li>
         ))}
       </ul>

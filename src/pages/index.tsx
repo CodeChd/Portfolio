@@ -24,8 +24,13 @@ export default function Home() {
 
   //change state based on screen size
   const [particlesMedia, setParticlesMedia] = useState(false);
+  let particleSize;
 
-  
+  if (particlesMedia) {
+    particleSize = 27;
+  } else if (!particlesMedia) {
+    particleSize = 75;
+  }
 
   const updateTarget = useCallback((e: any) => {
     if (e.matches) {
@@ -46,7 +51,7 @@ export default function Home() {
 
       return () => media.removeEventListener("resize", updateTarget);
     }
-  },[updateTarget]);
+  }, [updateTarget]);
 
   return (
     <>
@@ -126,7 +131,7 @@ export default function Home() {
                 },
                 particles: {
                   number: {
-                    value: `${particlesMedia ? 27 : 75}`,
+                    value: particleSize,
                     density: {
                       enable: false,
                       value_area: 900,
@@ -137,9 +142,6 @@ export default function Home() {
                   },
                   shape: {
                     type: "circle",
-                    options: {
-                      sides: 3,
-                    },
                   },
                   opacity: {
                     value: 0.6,
