@@ -13,14 +13,10 @@ import { motion } from "framer-motion";
 export default function Home() {
   const router = useRouter();
   const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine);
 
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
-  }, []);
 
   //change state based on screen size
   const [particlesMedia, setParticlesMedia] = useState(false);
@@ -56,7 +52,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CJ&apos;s | Portfolio </title>
+        <title>CJ Francisco</title>
         <meta name="description" content="Home Page" />
       </Head>
       <Transition />
@@ -123,7 +119,6 @@ export default function Home() {
               className=""
               id="tsparticles"
               init={particlesInit}
-              loaded={particlesLoaded}
               options={{
                 fullScreen: {
                   enable: true,
