@@ -25,7 +25,9 @@ export default function Home() {
   //change state based on screen size
   const [particlesMedia, setParticlesMedia] = useState(false);
 
-  const updateTarget = useCallback((e) => {
+  
+
+  const updateTarget = useCallback((e: any) => {
     if (e.matches) {
       setParticlesMedia(true);
     } else {
@@ -44,7 +46,7 @@ export default function Home() {
 
       return () => media.removeEventListener("resize", updateTarget);
     }
-  }, []);
+  },[updateTarget]);
 
   return (
     <>
