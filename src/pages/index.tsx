@@ -19,13 +19,13 @@ export default function Home() {
 
 
   //change state based on screen size
-  const [particlesMedia, setParticlesMedia] = useState(false);
-  let particleSize;
-
+  const [particlesMedia, setParticlesMedia] = useState<Boolean>(false);
+  let particleSizess;
+  
   if (particlesMedia) {
-    particleSize = 28;
+    particleSizess = 28;
   } else if (!particlesMedia) {
-    particleSize = 75;
+    particleSizess = 75;
   }
 
   const updateTarget = useCallback((e: any) => {
@@ -91,7 +91,7 @@ export default function Home() {
                 className="flex items-center self-center sm:mt-[3rem] "
               >
                 <Link
-                  href="/CARL JANDEL FRANCISCO - CV.pdf"
+                  href="/carl jandel francisco.pdf"
                   target="_blank"
                   className="flex items-center p-2.5 px-6 bg-dark text-light
               rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
@@ -99,7 +99,7 @@ export default function Home() {
                   download={true}
                 >
                   Resume
-                  <LinkArrow className="w-6 ml-1" />
+                  <LinkArrow className="w-6 ml-1 sm:w-6 sm: h-6" />
                 </Link>
                 <Link
                   href="mailto:drowzyking1126@gmail.com"
@@ -126,7 +126,7 @@ export default function Home() {
                 },
                 particles: {
                   number: {
-                    value: particleSize,
+                    value: particleSizess,
                     density: {
                       enable: false,
                       value_area: 900,

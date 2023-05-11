@@ -42,7 +42,8 @@ const Skills = () => {
         <SkillComponent name="CSS" x="-5vw" y="-10vw"/>
         <SkillComponent name="HTML" x="-14vw" y="4vw"/>
         <SkillComponent name="Javascript" x="16vw" y="1vw"/>
-        <SkillComponent name="ReactJS" x="-23vw" y="-8vw"/>
+        <SkillComponent name="Typescript" x="-19vw" y="-5vw"/>
+        <SkillComponent name="ReactJS" x="-29vw" y="-9vw"/>
         <SkillComponent name="NextJS" x="-28vw" y="8vw"/>
         <SkillComponent name="Firebase" x="15vw" y="14vw"/>
         <SkillComponent name="Supabase" x="23vw" y="19vw"/>
@@ -55,6 +56,7 @@ const Skills = () => {
         <SkillComponent name="SASS" x="-17vw" y="-17vw"/>
         <SkillComponent name="REST API" x="30vw" y="6vw"/>
         <SkillComponent name="NodeJS" x="-20vw" y="19vw"/>
+        <SkillComponent name="ExpressJS" x="5vw" y="10vw"/>
         <SkillComponent name="Photoshop" x="30vw" y="-10vw"/>
       </div>
     </>
