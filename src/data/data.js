@@ -10,7 +10,7 @@ export const Resources = [
       imgUrl: "/images/DEVFINDR-PROJECT.png",
     },
     {
-      imgUrl: "/me.jpg",
+      imgUrl: "/dpme.jpg",
     },
 
     
