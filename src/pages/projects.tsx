@@ -29,7 +29,7 @@ type TechStackProps = {
 const TechStack = ({ stackName, stackStyles = "" }: TechStackProps) => {
   return (
     <div className="w-full rounded-2xl my-2">
-      <ul className="w-full flex  items-center justify-start gap-2">
+      <ul className="w-full flex flex-wrap  items-center justify-start md:gap-3 gap-2">
         {stackName.split(/\s+/).map((name) => (
           <li
             key={name}
@@ -94,7 +94,7 @@ const Project = ({
           </Link>
           <Link
             href={link}
-            className="ml-4 rounded-lg bg-dark text-light p-2  px-6 text-lg font-semibold
+            className="ml-4 rounded-lg bg-dark text-light p-2 md:px-4 px-6 text-lg font-semibold
             md:text-base "
             target="_blank"
           >
@@ -130,11 +130,11 @@ const projects = () => {
               <Project
                 img={Resources[0].imgUrl}
                 title="JCYTF Church"
-                summary="The church website displays general information about the church and includes user authentication and authorization for the admin dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
+                summary="The church website displays general information about the church and includes user authentication and authorization for the admin and officer dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
                 link="https://github.com/CodeChd/jcytf-community-church"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
-                stack="NextJS PHP MYSQL TAILWIND"
+                stack="NextJS Php Mysql Tailwind"
                 stackClassName="text-start w-max"
                 live="https://jcytfchurch.vercel.app/"
               />
