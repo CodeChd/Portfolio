@@ -131,7 +131,7 @@ const projects = () => {
                 img={Resources[0].imgUrl}
                 title="JCYTF Church"
                 summary="The church website displays general information about the church and includes user authentication and authorization for the admin and officer dashboard. The website also offers CRUD functionality, which allows assigned admins to add events that will take place at the church. The primary aim of the website is to guide users about the church's information or want to be part of them."
-                link="https://github.com/CodeChd/jcytf-community-church"
+                link="https://github.com/CodeChd/jcytf-v2"
                 github="https://github.com/CodeChd"
                 type="Featured Project"
                 stack="NextJS Php Mysql Tailwind"
