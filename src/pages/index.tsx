@@ -13,15 +13,13 @@ import { motion } from "framer-motion";
 export default function Home() {
   const router = useRouter();
   const particlesInit = useCallback(async (engine: any) => {
-
     await loadFull(engine);
   }, []);
-
 
   //change state based on screen size
   const [particlesMedia, setParticlesMedia] = useState<Boolean>(false);
   let particleSizess;
-  
+
   if (particlesMedia) {
     particleSizess = 28;
   } else if (!particlesMedia) {
@@ -58,59 +56,21 @@ export default function Home() {
       <Transition />
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
         <Layout className="mt-[12rem]">
-          <AnimatedText
-            text="CJ Francisco"
-            className="!w-[80%] overflow-hidden mx-auto !text-9xl absolute right-0 top-[36%] !normal-case !text-right xxl:!text-8xl xl:!text-7xl xl:top-[40%] lg:!text-right lg:!w-full lg:!text-6xl lg:top-[40%] md:!text-5xl md:top-[40%] sm:!text-center sm:top-[50%] "
-          />
-          <AnimatedText
-            text="Full Stack Developer"
-            className="!w-full !text-9xl max-w-full absolute left-0 top-[50%] !normal-case !text-left  xxl:!text-8xl xl:!text-7xl lg:!text-left lg:!w-full lg:!text-6xl md:top-[48%] md:!text-5xl sm:!text-center sm:top-[59%]"
-          />
-          <div className="flex items-center justify-between w-fulll ">
-            <div className="w-1/2 flex mx-auto flex-col items-center justify-center">
-              {/* Note : Responsive Text Technique */}
-
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.3 }}
-                className="my-4 text-[16.55px] font-[600] sm:hidden"
-              >
-                CJ is a self-taught full-stack developer with a passion for
-                creating engaging and useful websites. With a strong foundation
-                in web development, always exploring different technologies and
-                finding new ways to learn. and constantly seeking out new
-                challenges to improve his skills
-              </motion.p>
-
-              {/* resume & contact links */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1, duration: 0.3 }}
-                className="flex items-center self-center sm:mt-[3rem] "
-              >
-                <Link
-                  href="/carl jandel francisco.pdf"
-                  target="_blank"
-                  className="flex items-center p-2.5 px-6 bg-dark text-light
-              rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
-              border border-solid border-transparent hover:border-dark"
-                  download={true}
-                >
-                  Resume
-                  <LinkArrow className="w-6 ml-1 sm:w-6 sm: h-6" />
-                </Link>
-                <Link
-                  href="mailto:drowzyking1126@gmail.com"
-                  target="_blank"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline "
-                >
-                  Contact
-                </Link>
-              </motion.div>
+          <main className="border-solid border-2 border-gray-900">
+            <h1 className="text-3xl">{`Welcome`}</h1>
+            <div className="flex ">
+              <img src="" alt="" />
+              <div>
+                <div>
+                  <p></p>
+                  <p></p>
+                </div>
+                <p>
+                  
+                </p>
+              </div>
             </div>
-          </div>
+          </main>
         </Layout>
 
         <div className=" absolute">
@@ -139,7 +99,7 @@ export default function Home() {
                     type: "circle",
                   },
                   opacity: {
-                    value: 0.6,
+                    value: 0.5,
                     random: false,
                     anim: {
                       enable: false,
@@ -149,7 +109,7 @@ export default function Home() {
                     },
                   },
                   size: {
-                    value: 5,
+                    value: 2,
                     random: true,
                     anim: {
                       enable: false,
@@ -161,26 +121,26 @@ export default function Home() {
                   rotate: {
                     value: 0,
                     random: true,
-                    direction: "anti-clockwise",
+                    direction: "clockwise",
                     animation: {
-                      enable: true,
-                      speed: 3,
+                      enable: false,
+                      speed: 5,
                       sync: false,
                     },
                   },
                   line_linked: {
                     enable: false,
-                    distance: 110,
+                    distance: 150,
                     color: "#0f172a",
-                    opacity: 0.4,
-                    width: 2,
+                    opacity: 0,
+                    width: 0,
                   },
                   move: {
                     enable: true,
-                    speed: 1.3,
-                    direction: "none",
+                    speed: 30,
+                    direction: "bottom",
                     random: false,
-                    straight: false,
+                    straight: true,
                     out_mode: "out",
                     attract: {
                       enable: false,
@@ -193,7 +153,7 @@ export default function Home() {
                   events: {
                     onhover: {
                       enable: true,
-                      mode: ["repulse"],
+                      mode: "repulse",
                     },
                     onclick: {
                       enable: false,
@@ -203,23 +163,23 @@ export default function Home() {
                   },
                   modes: {
                     grab: {
-                      distance: 800,
+                      distance: 400,
                       line_linked: {
                         opacity: 1,
                       },
                     },
                     bubble: {
-                      distance: 20,
-                      size: 45,
+                      distance: 400,
+                      size: 40,
                       duration: 2,
-                      opacity: 8,
+                      opacity: 9,
                       speed: 3,
                     },
                     repulse: {
                       distance: 90,
                     },
                     push: {
-                      particles_nb: 0,
+                      particles_nb: 1,
                     },
                     remove: {
                       particles_nb: 0,
@@ -235,3 +195,5 @@ export default function Home() {
     </>
   );
 }
+
+//

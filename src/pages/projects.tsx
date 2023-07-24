@@ -1,10 +1,10 @@
-import AnimatedText from "../components/AnimatedText";
+// import AnimatedText from "../components/AnimatedText";
 import { GithubIcon } from "../components/Icon";
 import Layout from "../components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Resources } from "../data/data";
+import { Resources } from "../data/data.js";
 import { motion } from "framer-motion";
 import Transition from "../components/Transition";
 
@@ -116,10 +116,10 @@ const projects = () => {
       <Transition/>
       <main className="w-full mb-16 flex flex-col items-center justify-between ">
         <Layout className="pt-16">
-          <AnimatedText
+          {/* <AnimatedText
             text="The best way to predict the future is to invent it!"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl "
-          />
+          /> */}
 
           <div className="w-full grid grid-cols-12 gap-11 md:gap-6 ">
             <motion.div
@@ -161,12 +161,12 @@ const projects = () => {
             className="col-span-4 xl:col-span-6 md:col-span-12">
               <Project
                 img={Resources[2].imgUrl}
-                title="Dev Finder"
-                summary="Dev Finder is an app that enables users to discover and display information about other GitHub users, presented through engaging visuals."
+                title="Psy Games"
+                summary="a discovery game app that enables users to search for popular or trending games. The app will provide a platform for users to explore and discover new games that match their interests. It will help users stay up-to-date with the latest trends in the gaming industry."
                 link="https://github.com/CodeChd/dev-finder"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
-                stack="ReactJS"
+                stack="ReactJS Zustand React-Query"
                 stackClassName="text-start w-max"
                 live="https://dev-findr-cjfrancisco.netlify.app"
               />
