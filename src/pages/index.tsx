@@ -2,13 +2,14 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "../components/Icon";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Transition from "../components/Transition";
 import { motion } from "framer-motion";
+import { Resources } from "../data/data";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -55,20 +56,26 @@ export default function Home() {
       </Head>
       <Transition />
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
-        <Layout className="mt-[12rem]">
-          <main className="border-solid border-2 border-gray-900">
-            <h1 className="text-3xl">{`Welcome`}</h1>
-            <div className="flex ">
-              <img src="" alt="" />
-              <div>
-                <div>
-                  <p></p>
-                  <p></p>
-                </div>
-                <p>
-                  
-                </p>
-              </div>
+        <Layout className="">
+          <main className="grid grid-cols-2 xlx:grid-cols-1 ">
+            <div className="flex flex-col gap-4  xlx:order-2">
+              <h1 className="text-3xl">{`Welcome`}</h1>
+              <p>
+                CJ is a self-taught full-stack developer with a passion for
+                creating engaging and useful websites. With a strong foundation
+                in web development, always exploring different technologies and
+                finding new ways to learn. and constantly seeking out new
+                challenges to improve his skills
+              </p>
+            </div>
+            <div className="flex justify-end xl:justify-center xl:items-center xlx:order-1 w-[43rem] lg:w-full translate-x-22  ">
+              <Image
+                src={Resources[3].imgUrl}
+                width={400}
+                height={400}
+                alt="Programming"
+                className="w-full h-full object-cover"
+              />
             </div>
           </main>
         </Layout>

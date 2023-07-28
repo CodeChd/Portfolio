@@ -4,9 +4,9 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Resources } from "../data/data.js";
 import { motion } from "framer-motion";
 import Transition from "../components/Transition";
+import { Resources } from "../data/data";
 
 type ProjectProps = {
   type: string
@@ -146,7 +146,7 @@ const projects = () => {
               <Project
                 img={Resources[1].imgUrl}
                 title="What i Learned"
-                summary=" Full Stack application that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
+                summary="App that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
                 link="https://github.com/CodeChd/what-i-learn "
                 github="https://github.com/CodeChd"
                 type="Featured Project"
@@ -162,13 +162,13 @@ const projects = () => {
               <Project
                 img={Resources[2].imgUrl}
                 title="Psy Games"
-                summary="a discovery game app that enables users to search for popular or trending games. The app will provide a platform for users to explore and discover new games that match their interests. It will help users stay up-to-date with the latest trends in the gaming industry."
+                summary="A discovery game app that enables users to search for popular or trending games. The app will provide a platform for users to explore and discover new games that match their interests. It will help users stay up-to-date with the latest trends in the gaming industry."
                 link="https://github.com/CodeChd/dev-finder"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
                 stack="ReactJS Zustand React-Query"
                 stackClassName="text-start w-max"
-                live="https://dev-findr-cjfrancisco.netlify.app"
+                live="https://psy-games-cj.netlify.app"
               />
             </motion.div>
           </div>

@@ -35,6 +35,7 @@ module.exports = {
       xxl: { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
   
+      xlx: { max: "1350px" },
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
   
