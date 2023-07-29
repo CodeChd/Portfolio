@@ -36,7 +36,7 @@ const about = () => {
   md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
       />
               <Image
-                src={Resources[3].imgUrl}
+                src={Resources[4].imgUrl}
                 width={400}
                 height={400}
                 alt="Carl Jandel Francisco"

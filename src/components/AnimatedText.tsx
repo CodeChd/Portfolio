@@ -33,7 +33,7 @@ type TextProps = {
   className: string
 }
 
-const AnimatedText = ({text, className = ""}: TextProps,) => {
+const   AnimatedText = ({text, className = ""}: TextProps,) => {
   return (
     <div
       className="w-full flex items-center justify-center mx-auto py-2 sm:py-0 text-center

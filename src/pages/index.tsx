@@ -10,6 +10,7 @@ import Transition from "../components/Transition";
 import { motion } from "framer-motion";
 import { Resources } from "../data/data";
 import Image from "next/image";
+import { LinkArrow } from "../components/Icon";
 
 export default function Home() {
   const router = useRouter();
@@ -57,24 +58,51 @@ export default function Home() {
       <Transition />
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
         <Layout className="">
-          <main className="grid grid-cols-2 xlx:grid-cols-1 ">
-            <div className="flex flex-col gap-4  xlx:order-2">
-              <h1 className="text-3xl">{`Welcome`}</h1>
-              <p>
+          <main className="grid grid-cols-5 xxl:grid-cols-4 xlx:grid-cols-1 justify-end xlx:justify-center gap-14  ">
+            <div className="flex flex-col col-span-3 xxl:col-span-2 gap-4  xlx:order-2">
+              <h1 className="text-4xl font-le font-semibold text-gray-600">
+                👋 Hi my name is CJ
+              </h1>
+              <p className="text-xl tracking-wide">
                 CJ is a self-taught full-stack developer with a passion for
                 creating engaging and useful websites. With a strong foundation
                 in web development, always exploring different technologies and
                 finding new ways to learn. and constantly seeking out new
                 challenges to improve his skills
               </p>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.3 }}
+                className="flex items-center sm:mt-[3rem] "
+              >
+                <Link
+                  href="/carl jandel francisco.pdf"
+                  target="_blank"
+                  className="flex items-center p-2.5 px-6 bg-dark text-light
+  rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
+  border border-solid border-transparent hover:border-dark"
+                  download={true}
+                >
+                  Resume
+                  <LinkArrow className="w-6 ml-1 sm:w-6 sm: h-6" />
+                </Link>
+                <Link
+                  href="mailto:drowzyking1126@gmail.com"
+                  target="_blank"
+                  className="ml-4 text-lg font-medium capitalize text-dark underline "
+                >
+                  Contact
+                </Link>
+              </motion.div>
             </div>
-            <div className="flex justify-end xl:justify-center xl:items-center xlx:order-1 w-[43rem] lg:w-full translate-x-22  ">
+            <div className="w-[40rem] lg:w-full flex col-span-2 xlx:order-1">
               <Image
                 src={Resources[3].imgUrl}
                 width={400}
                 height={400}
                 alt="Programming"
-                className="w-full h-full object-cover"
+                className="w-full h-full "
               />
             </div>
           </main>
