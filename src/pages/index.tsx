@@ -58,9 +58,9 @@ export default function Home() {
       <Transition />
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
         <Layout className="">
-          <main className="grid grid-cols-5 xxl:grid-cols-4 xlx:grid-cols-1 gap-14  relative">
+          <main className="grid grid-cols-5 xxl:grid-cols-4 xlx:grid-cols-1 md:text-center gap-14  relative">
             <div className="flex flex-col col-span-3 xxl:col-span-2 gap-4  xlx:order-2">
-              <h1 className="text-4xl md:text-3xl font-le font-semibold text-gray-600">
+              <h1 className="text-4xl md:text-3xl  font-le font-semibold text-gray-600">
                 👋 Hi my name is CJ
               </h1>
               <p className="text-xl  md:text-lg tracking-wide">
@@ -74,7 +74,7 @@ export default function Home() {
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.3 }}
-                className="flex items-center  "
+                className="flex items-center  md:justify-center md:mb-14"
               >
                 <Link
                   href="/carl jandel francisco.pdf"

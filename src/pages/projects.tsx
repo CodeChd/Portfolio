@@ -125,7 +125,7 @@ const projects = () => {
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.3 }}
+              transition={{ delay: 1, duration: 0.4 }}
               className="col-span-4 xl:col-span-6 md:col-span-12"
             >
               <Project
@@ -143,7 +143,7 @@ const projects = () => {
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.3, duration: 0.3 }}
+              transition={{ delay: 1, duration: 0.4 }}
               className="col-span-4 xl:col-span-6 md:col-span-12 "
             >
               <Project
@@ -161,7 +161,7 @@ const projects = () => {
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.7, duration: 0.3 }}
+              transition={{ delay: 1, duration: 0.4 }}
               className="col-span-4 xl:col-span-6 md:col-span-12"
             >
               <Project
