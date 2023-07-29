@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import { Montserrat, Poppins} from "next/font/google";
+import { Montserrat, Poppins, League_Spartan} from "next/font/google";
 
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -20,6 +20,11 @@ const fontM = Montserrat({
   variable: "--font-mont",
   
 });
+const fontL = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-le",
+  
+});
 
 export default function App({ Component, pageProps }) {
   const router =  useRouter()
@@ -30,7 +35,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={`${fontM.variable} ${fontOs.variable} font-mont bg-light w-full min-h-screen`}>
+      <main className={`${fontM.variable} ${fontOs.variable} ${fontL.variable} font-mont bg-light w-full min-h-screen`}>
         <Navbar/>
         <AnimatePresence
         mode="wait">

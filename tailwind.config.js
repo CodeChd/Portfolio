@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
         al: ["var(--font-al)", ...fontFamily.sans],
+        le: ["var(--font-le)", ...fontFamily.sans],
       },
       colors: {
         dark: "#1b1b1b",
@@ -35,6 +36,8 @@ module.exports = {
       xxl: { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
   
+      xlx: { max: "1350px" },
+
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
   

@@ -1,30 +1,30 @@
-import AnimatedText from "../components/AnimatedText";
+// import AnimatedText from "../components/AnimatedText";
 import { GithubIcon } from "../components/Icon";
 import Layout from "../components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Resources } from "../data/data";
 import { motion } from "framer-motion";
 import Transition from "../components/Transition";
+import { Resources } from "../data/data";
+import AnimatedText from "../components/AnimatedText";
 
 type ProjectProps = {
-  type: string
-  title: string
-  summary: string
-  img: string
-  link: string
-  github: string
-  stack: string
-  stackClassName: string
-  live: string
-}
-
+  type: string;
+  title: string;
+  summary: string;
+  img: string;
+  link: string;
+  github: string;
+  stack: string;
+  stackClassName: string;
+  live: string;
+};
 
 type TechStackProps = {
-  stackStyles: string
-  stackName: string
-}
+  stackStyles: string;
+  stackName: string;
+};
 //Stack used
 const TechStack = ({ stackName, stackStyles = "" }: TechStackProps) => {
   return (
@@ -55,9 +55,7 @@ const Project = ({
   live,
 }: ProjectProps) => {
   return (
-   
     <article className="w-full flex flex-col flex-wrap items-center justify-between rounded-3xl border border-solid border-dark bg-light text-dark shadow-2xl p-12 relative xs:p-4 ">
-
       <div
         className="absolute top-0 -right-3 -z-10 h-[102%] w-[102%] rounded-[2rem] bg-dark 
   md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
@@ -68,7 +66,14 @@ const Project = ({
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg   "
       >
-        <Image src={`${img}`} alt={title} width={400} height={400} priority className="w-50%  h-auto" />
+        <Image
+          src={`${img}`}
+          alt={title}
+          width={400}
+          height={400}
+          priority
+          className="w-50%  h-auto"
+        />
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-2 ">
@@ -113,20 +118,16 @@ const projects = () => {
         <title>Projects</title>
         <meta name="description" content="My Projects" />
       </Head>
-      <Transition/>
+      <Transition />
       <main className="w-full mb-16 flex flex-col items-center justify-between ">
         <Layout className="pt-16">
-          <AnimatedText
-            text="The best way to predict the future is to invent it!"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl "
-          />
-
           <div className="w-full grid grid-cols-12 gap-11 md:gap-6 ">
             <motion.div
-            initial={{y:60}}
-            animate={{y:0}}
-            className="col-span-4 xl:col-span-6 md:col-span-12">
-             
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.88, duration: 0.3 }}
+              className="col-span-4 xl:col-span-6 md:col-span-12"
+            >
               <Project
                 img={Resources[0].imgUrl}
                 title="JCYTF Church"
@@ -140,13 +141,15 @@ const projects = () => {
               />
             </motion.div>
             <motion.div
-            initial={{y:60}}
-            animate={{y:0}}
-            className="col-span-4 xl:col-span-6 md:col-span-12 ">
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.3, duration: 0.3 }}
+              className="col-span-4 xl:col-span-6 md:col-span-12 "
+            >
               <Project
                 img={Resources[1].imgUrl}
                 title="What i Learned"
-                summary=" Full Stack application that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
+                summary="App that helps people store their ideas on a day-to-day basis without the risk of losing them. The app allows users to categorize their insights and displays facts about each category name. Users can vote or downvote if a fact is true or false "
                 link="https://github.com/CodeChd/what-i-learn "
                 github="https://github.com/CodeChd"
                 type="Featured Project"
@@ -156,19 +159,21 @@ const projects = () => {
               />
             </motion.div>
             <motion.div
-            initial={{y:60}}
-            animate={{y:0}}
-            className="col-span-4 xl:col-span-6 md:col-span-12">
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.3 }}
+              className="col-span-4 xl:col-span-6 md:col-span-12"
+            >
               <Project
                 img={Resources[2].imgUrl}
-                title="Dev Finder"
-                summary="Dev Finder is an app that enables users to discover and display information about other GitHub users, presented through engaging visuals."
-                link="https://github.com/CodeChd/dev-finder"
+                title="Psy Games"
+                summary="A discovery game app that enables users to search for popular or trending games. The app will provide a platform for users to explore and discover new games that match their interests. It will help users stay up-to-date with the latest trends in the gaming industry."
+                link="https://github.com/CodeChd/psy-games"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
-                stack="ReactJS"
+                stack="ReactJS Zustand React-Query"
                 stackClassName="text-start w-max"
-                live="https://dev-findr-cjfrancisco.netlify.app"
+                live="https://psy-games-cj.netlify.app"
               />
             </motion.div>
           </div>
