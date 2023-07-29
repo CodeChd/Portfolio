@@ -168,7 +168,7 @@ const projects = () => {
                 img={Resources[2].imgUrl}
                 title="Psy Games"
                 summary="A discovery game app that enables users to search for popular or trending games. The app will provide a platform for users to explore and discover new games that match their interests. It will help users stay up-to-date with the latest trends in the gaming industry."
-                link="https://github.com/CodeChd/dev-finder"
+                link="https://github.com/CodeChd/psy-games"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
                 stack="ReactJS Zustand React-Query"
