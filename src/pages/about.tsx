@@ -22,7 +22,7 @@ const about = () => {
             <h2 className="self-center font-medium text-2xl">What&apos;s up</h2>
             <AnimatedText
               text="Get to know about me"
-              className="!text-7xl lg:!text-6xl md:!text-5xl sm:!text-4xl xs:!text-3xl !normal-case"
+              className="!text-7xl lg:!text-6xl md:!text-5xl sm:!text-4xl xs:!text-3xl !normal-case !font-le"
             />
           </div>
           <div className="flex justify-center items-center mt-5">
