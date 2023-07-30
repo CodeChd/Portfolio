@@ -59,11 +59,11 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen -z-1">
         <Layout className="">
           <main className="grid grid-cols-5 xxl:grid-cols-4 xlx:grid-cols-1 md:text-center gap-14  relative">
-            <div className="flex flex-col col-span-3 xxl:col-span-2 gap-4  xlx:order-2">
+            <div className="flex self-center flex-col col-span-3 xxl:col-span-2 gap-4  xlx:order-2">
               <h1 className="text-4xl md:text-3xl  font-le font-semibold text-gray-600">
                 👋 Hi my name is CJ
               </h1>
-              <p className="text-xl  md:text-lg tracking-wide">
+              <p className="text-xl text-violet-950  md:text-lg tracking-wide">
                 CJ is a self-taught full-stack developer with a passion for
                 creating engaging and useful websites. With a strong foundation
                 in web development, always exploring different technologies and
@@ -77,7 +77,7 @@ export default function Home() {
                 className="flex items-center  md:justify-center md:mb-14"
               >
                 <Link
-                  href="/carl jandel francisco.pdf"
+                  href="/CARL JANDEL FRANCISCO.pdf"
                   target="_blank"
                   className="flex items-center p-2.5 px-6 bg-dark text-light
   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
@@ -96,6 +96,8 @@ export default function Home() {
                 </Link>
               </motion.div>
             </div>
+
+
             <div className="w-[40rem] lg:w-full col-span-2 xlx:order-1 xlx:ml-[20%] lg:ml-0">
               <Image
                 src={Resources[3].imgUrl}

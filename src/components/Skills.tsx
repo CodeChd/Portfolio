@@ -28,7 +28,7 @@ const SkillComponent = ({name, x,y}: SkillsProp) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 xs:text-5xl">Skills</h2>
+      <h2 className="font-bold !font-le text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 xs:text-5xl">Skills</h2>
       <div className="w-[90%] mx-auto  h-screen relative flex items-center justify-center rounded-full bg-circleLight lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightlg md:bg-circleLightmd sm:bg-circleLightsm">
         <motion.div 
         className="
