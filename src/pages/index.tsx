@@ -23,7 +23,7 @@ export default function Home() {
   let particleSizess;
 
   if (particlesMedia) {
-    particleSizess = 28;
+    particleSizess = 20;
   } else if (!particlesMedia) {
     particleSizess = 75;
   }
@@ -77,7 +77,7 @@ export default function Home() {
                 className="flex items-center  md:justify-center md:mb-14"
               >
                 <Link
-                  href="/CARL JANDEL FRANCISCO.pdf"
+                  href="/Carl Francisco.pdf"
                   target="_blank"
                   className="flex items-center p-2.5 px-6 bg-dark text-light
   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
