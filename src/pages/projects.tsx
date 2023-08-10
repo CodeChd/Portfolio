@@ -171,7 +171,7 @@ const projects = () => {
                 link="https://github.com/CodeChd/psy-games"
                 type="Featured Project"
                 github="https://github.com/CodeChd"
-                stack="ReactJS Zustand React-Query"
+                stack="ReactJS Chakra Typescript"
                 stackClassName="text-start w-max"
                 live="https://psy-games-cj.netlify.app"
               />
